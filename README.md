@@ -113,6 +113,7 @@ Grid
     - Convert the x, y, z coordinates for the atom from world coordinates to the ligand coordinate system by substracting the centroid of the ligand.
     - Rotate the atom using the rotation matrix created earlier (R00 - R22).
     - Move the atom back into the world coordinates and translate the pose by adding back in the centroid and the translation vector.
+    - The ligand atoms coordinates are stored as a FLAT array in `const double* ligand` so you must index them appropriately!
 
 ```cpp
 // Applying the logic to the x coordinate for the atom
